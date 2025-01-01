@@ -11,74 +11,82 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
+         <style>
             /* Styled button class for boundary style */
-            .styled-button {
-                display: inline-block;
-                padding: 10px 15px;
-                border: 2px solid #ccc; /* Adjust color */
-                border-radius: 5px; /* Rounded corners */
-                text-decoration: none;
-                color: #f7f0f0; /* Text color */
-                font-size: 16px;
-                font-weight: bold;
-                background: transparent; /* Transparent background */
-                transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
-                text-align: center;
-            }
+            /* Styled button class for boundary style */
+			.styled-button {
+				display: inline-block;
+				padding: 10px 15px;
+				border: 2px solid #ccc; /* Adjust color */
+				border-radius: 5px; /* Rounded corners */
+				text-decoration: none;
+				color: #f7f0f0; /* Text color */
+				font-size: 16px;
+				font-weight: bold;
+				background: transparent; /* Transparent background */
+				transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+				text-align: center;
+			}
 
-            .styled-button:hover {
-                background-color: #cc0d0d; /* Change on hover */
-                color: #0a0505; /* Text color on hover */
-            }
+			.styled-button:hover {
+				background-color: #cc0d0d; /* Change on hover */
+				color: #0a0505; /* Text color on hover */
+			}
 
-            /* Navigation container styles */
-            .nav-buttons {
-                display: flex;
-                flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
-                justify-content: center; /* Center the buttons */
-                gap: 10px; /* Add space between buttons */
-                padding: 10px;
-            }
+			/* Navigation container styles */
+			.nav-buttons {
+				display: flex; /* Use flexbox for layout */
+				flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+				justify-content: center; /* Center the buttons horizontally */
+				gap: 10px; /* Add space between buttons */
+				padding: 10px;
+			}
 
-            /* Menu list styles */
-            .menu-list a {
-                text-decoration: none;
-                color: #f0ebeb;
-                padding: 10px 15px;
-                display: flex;
-                align-items: center;
-                font-family: 'Roboto', sans-serif; /* Using Google Font */
-                font-size: 18px;
-            }
+			/* Menu list styles */
+			.menu-list a {
+				text-decoration: none;
+				color: #f0ebeb;
+				padding: 10px 15px;
+				display: flex;
+				align-items: center;
+				font-family: 'Roboto', sans-serif; /* Using Google Font */
+				font-size: 18px;
+			}
 
-            .menu-list a:hover {
-                background-color: #0a0404;
-                color: #000;
-            }
+			.menu-list a:hover {
+				background-color: #0a0404;
+				color: #000;
+			}
 
-            .menu-list i {
-                margin-right: 10px;
-            }
+			.menu-list i {
+				margin-right: 10px;
+			}
 
-            .menu-list span {
-                font-weight: bold;
-            }
+			.menu-list span {
+				font-weight: bold;
+			}
 
-            /* Responsive styles for small screens */
-            @media (max-width: 768px) {
-                .styled-button {
-                    font-size: 14px; /* Smaller text size for buttons */
-                    padding: 8px 12px; /* Reduce padding for better fit */
-                }
-            }
+			/* Responsive styles for medium screens */
+			@media (max-width: 768px) {
+				.styled-button {
+					font-size: 14px; /* Smaller text size for buttons */
+					padding: 8px 12px; /* Reduce padding for better fit */
+				}
+			}
 
-            @media (max-width: 480px) {
-                .nav-buttons {
-                    flex-direction: column; /* Stack buttons vertically */
-                    gap: 5px; /* Reduce spacing */
-                }
-            }
+			/* Responsive styles for small screens */
+			@media (max-width: 480px) {
+				.nav-buttons {
+					flex-wrap: wrap; /* Ensure buttons wrap */
+					justify-content: center; /* Center the buttons */
+					gap: 5px; /* Reduce spacing for smaller screens */
+				}
+
+				.styled-button {
+					font-size: 14px; /* Adjust font size for small screens */
+					padding: 8px 12px; /* Adjust padding for small screens */
+				}
+			}
         </style>
 	</head>
 	<body class="is-preload">
