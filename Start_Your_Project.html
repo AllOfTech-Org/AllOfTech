@@ -1,233 +1,313 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Start Your Project - AllOfTech</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-         <style>
+    <head>
+        <title>Start Your Project - AllOfTech</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
             /* Styled button class for boundary style */
-            /* Styled button class for boundary style */
-			.styled-button {
-				display: inline-block;
-				padding: 10px 15px;
-				border: 2px solid #ccc; /* Adjust color */
-				border-radius: 5px; /* Rounded corners */
-				text-decoration: none;
-				color: #f7f0f0; /* Text color */
-				font-size: 16px;
-				font-weight: bold;
-				background: transparent; /* Transparent background */
-				transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
-				text-align: center;
-			}
+            .styled-button {
+                display: inline-block;
+                padding: 10px 15px;
+                border: 2px solid #ccc; /* Adjust color */
+                border-radius: 5px; /* Rounded corners */
+                text-decoration: none;
+                color: #f7f0f0; /* Text color */
+                font-size: 16px;
+                font-weight: bold;
+                background: transparent; /* Transparent background */
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth hover effect */
+                text-align: center;
+                cursor: pointer;
+            }
 
-			.styled-button:hover {
-				background-color: #cc0d0d; /* Change on hover */
-				color: #0a0505; /* Text color on hover */
-			}
+            .styled-button:hover {
+                background-color: #cc0d0d; /* Change on hover */
+                color: #0a0505; /* Text color on hover */
+            }
 
-			/* Navigation container styles */
-			.nav-buttons {
-				display: flex; /* Use flexbox for layout */
-				flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
-				justify-content: center; /* Center the buttons horizontally */
-				gap: 10px; /* Add space between buttons */
-				padding: 10px;
-			}
+            /* Navigation container styles */
+            .nav-buttons {
+                display: flex; /* Use flexbox for layout */
+                flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+                justify-content: center; /* Center the buttons horizontally */
+                gap: 10px; /* Add space between buttons */
+                padding: 10px;
+            }
 
-			/* Menu list styles */
-			.menu-list a {
-				text-decoration: none;
-				color: #f0ebeb;
-				padding: 10px 15px;
-				display: flex;
-				align-items: center;
-				font-family: 'Roboto', sans-serif; /* Using Google Font */
-				font-size: 18px;
-			}
+            /* Menu list styles */
+            .menu-list a {
+                text-decoration: none;
+                color: #f0ebeb;
+                padding: 10px 15px;
+                display: flex;
+                align-items: center;
+                font-family: 'Roboto', sans-serif; /* Using Google Font */
+                font-size: 18px;
+            }
 
-			.menu-list a:hover {
-				background-color: #0a0404;
-				color: #000;
-			}
+            .menu-list a:hover {
+                background-color: #0a0404;
+                color: #000;
+            }
 
-			.menu-list i {
-				margin-right: 10px;
-			}
+            .menu-list i {
+                margin-right: 10px;
+            }
 
-			.menu-list span {
-				font-weight: bold;
-			}
+            .menu-list span {
+                font-weight: bold;
+            }
 
-			/* Responsive styles for medium screens */
-			@media (max-width: 768px) {
-				.styled-button {
-					font-size: 14px; /* Smaller text size for buttons */
-					padding: 8px 12px; /* Reduce padding for better fit */
-				}
-			}
+            /* Banner Styles (Keeping original) */
+            #banner {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 100vh;
+                background-image: url('images/L.gif'); /* Replace with your GIF file */
+                background-size: cover; /* Ensure the GIF covers the entire area */
+                background-position: center;
+                color: white;
+                text-align: left;
+                padding: 0 10%;
+            }
 
-			/* Responsive styles for small screens */
-			@media (max-width: 480px) {
-				.nav-buttons {
-					flex-wrap: wrap; /* Ensure buttons wrap */
-					justify-content: center; /* Center the buttons */
-					gap: 5px; /* Reduce spacing for smaller screens */
-				}
+            #banner .content {
+                max-width: 800px; /* Restrict content width */
+                animation: slideIn 1s ease-out; /* Slide-in animation for content */
+            }
+            
+            /* Slide-in animation */
+            @keyframes slideIn {
+                from {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
 
-				.styled-button {
-					font-size: 14px; /* Adjust font size for small screens */
-					padding: 8px 12px; /* Adjust padding for small screens */
-				}
-			}
+            /* Fade-in animation */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            /* --- REVISED FORM & FOOTER STYLES --- */
+
+            #footer {
+                padding: 6em 0;
+                background-color: #2e3141; /* Assuming a dark background for the footer */
+                color: #f7f0f0;
+            }
+
+            #contact-form {
+                max-width: 700px; /* Set a max width */
+                margin: 0 auto; /* Center the form */
+                padding: 0 2em; /* Add horizontal padding */
+            }
+
+            .fields {
+                display: flex;
+                flex-direction: column; /* Stack fields */
+                gap: 1.5em; /* Space between fields */
+            }
+
+            .field {
+                width: 100%;
+            }
+
+            /* Style for labels */
+            .field label {
+                display: block;
+                margin-bottom: 0.5em;
+                font-weight: bold;
+                color: #cc0d0d; /* Accent color for labels */
+                font-size: 1.1em;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+
+            /* Style for inputs and textarea */
+            .field input[type="text"],
+            .field input[type="email"],
+            .field textarea {
+                width: 100%;
+                padding: 14px 15px;
+                border: 2px solid #555; /* Neutral border color */
+                border-radius: 8px; /* Slightly more rounded corners */
+                background-color: #383b4a; /* Slightly darker background than footer for depth */
+                color: #f7f0f0;
+                font-size: 16px;
+                transition: border-color 0.3s, background-color 0.3s;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+                box-sizing: border-box; /* Ensures padding doesn't affect total width */
+            }
+
+            .field textarea {
+                resize: vertical; /* Allow vertical resizing only */
+                min-height: 180px; /* Generous height for project details */
+            }
+
+            /* Highlight on focus */
+            .field input:focus,
+            .field textarea:focus {
+                border-color: #cc0d0d; /* Your accent color on focus */
+                background-color: #44485c; /* Lighten background slightly on focus */
+                outline: none;
+            }
+
+            /* Actions list for centering the button */
+            .actions {
+                list-style: none;
+                padding: 0;
+                margin-top: 3em;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .actions li {
+                margin: 0;
+            }
+
+            /* Responsive styles for medium screens */
+            @media (max-width: 768px) {
+                .styled-button {
+                    font-size: 14px; /* Smaller text size for buttons */
+                    padding: 8px 12px; /* Reduce padding for better fit */
+                }
+
+                #contact-form {
+                    max-width: 90%;
+                }
+                .field input[type="text"],
+                .field input[type="email"],
+                .field textarea {
+                    padding: 10px 12px;
+                }
+            }
+
+            /* Responsive styles for small screens */
+            @media (max-width: 480px) {
+                .nav-buttons {
+                    flex-wrap: wrap; /* Ensure buttons wrap */
+                    justify-content: center; /* Center the buttons */
+                    gap: 5px; /* Reduce spacing for smaller screens */
+                }
+
+                .styled-button {
+                    font-size: 14px; /* Adjust font size for small screens */
+                    padding: 8px 12px; /* Adjust padding for small screens */
+                }
+
+                #footer {
+                    padding: 4em 0;
+                }
+            }
         </style>
-	</head>
-	<body class="is-preload">
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
-			<!-- Header -->
-			<header id="header" class="alt">
-				<nav>
-					<ul class="nav-buttons">
-						<!-- Navigation buttons with boundary style -->
-						<a href="#menu" class="styled-button">Services</a>
-						<a href="projects.html" class="styled-button">Projects</a>
-						<a href="About us.html" class="styled-button">About</a>
-						<a href="blog.html" class="styled-button">Blog</a>
-						<a href="index.html" class="styled-button">Home</a>
-					</ul>
-				</nav>
-			</header>
+    </head>
+    <body class="is-preload">
+        <div id="page-wrapper">
+            <header id="header" class="alt">
+                <nav>
+                    <ul class="nav-buttons">
+                        <li><a href="#menu" class="styled-button">Services</a></li>
+                        <li><a href="About us.html" class="styled-button">About</a></li>
+                        <li><a href="blog.html" class="styled-button">Blog</a></li>
+                        <li><a href="index.html" class="styled-button">Home</a></li>
+                    </ul>
+                </nav>
+            </header>
 
 			<!-- Menu -->
 			<nav id="menu">
 				<div class="inner">
-					<h2>Services</h2>
-					<ol class="menu-list">
-						<li><a href="Services/Education.html"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
-						<li><a href="Services/Custom_AI_Development.html"><i class="fas fa-cogs"></i> <span>Custom AI Development</span></a></li>
-						<li><a href="Services/Predictive_Analytics.html"><i class="fas fa-chart-line"></i> <span>Predictive Analytics</span></a></li>
-						<li><a href="Services/Real-Time AI Applications.html"><i class="fas fa-sync-alt"></i> <span>Real-Time AI Applications</span></a></li>
-						<li><a href="Services/Personalized AI Solutions.html"><i class="fas fa-user-circle"></i> <span>Personalized AI Solutions</span></a></li>
-					</ol>
-					<a href="#" class="close">Close</a>
+				<h2>Services</h2>
+				<ol class="menu-list">
+					<li><a href="Services/AI_ml services template/AI_ML Development Services.html"><i class="fas fa-robot"></i> <span>AI/ML Development Services</span></a></li>
+					<li><a href="Services/Blockchain_Development.html"><i class="fas fa-link"></i> <span>Blockchain Development</span></a></li>
+					<li><a href="Services/Web_Development.html"><i class="fas fa-code"></i> <span>Web Development</span></a></li>
+					<li><a href="Services/Mobile_App_Development.html"><i class="fas fa-mobile-alt"></i> <span>Mobile App Development</span></a></li>
+					<li><a href="Services/UX_UI_Design.html"><i class="fas fa-pencil-ruler"></i> <span>UX/UI Design</span></a></li>
+					<li><a href="Services/Graphics_Branding.html"><i class="fas fa-paint-brush"></i> <span>Graphics & Branding</span></a></li>            
+				</ol>
+				<a href="#" class="close">Close</a>
 				</div>
 			</nav>
 
-			<!-- Wrapper -->
-			<section id="banner">
-				<div class="inner">
-					<div id="intro" class="banner-content">
-						<div class="text-content">
-							<h2>Let's get your project started.</h2>
-							<p><strong>We'd love to hear from you! Whether you have questions, need assistance, or are looking to collaborate, our team is here to help. Reach out to us through the following channels:</strong></p>							
-						</div>
-					</div>
-				</div>
-			</section>				
+            <section id="banner">
+                <div class="inner">
+                    <div id="intro" class="banner-content">
+                        <div class="text-content">
+                            <h2>Let's get your project started.</h2>
+                            <p><strong>We'd love to hear from you! Whether you have questions, need assistance, or are looking to collaborate, our team is here to help. Reach out to us through the following channels:</strong></p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-			<!-- Add CSS to style the banner -->
-			<style>
-				#banner {
-					display: flex;
-					align-items: center;
-					justify-content: flex-start;
-					height: 100vh;
-					background-image: url('images/L.gif'); /* Replace with your GIF file */
-					background-size: cover; /* Ensure the GIF covers the entire area */
-					background-position: center;
-					color: white;
-					text-align: left;
-					padding: 0 10%;
-				}
+            <section id="footer">
+                <header class="major" style="text-align: center; margin-bottom: 3em; padding: 0 1em;">
+                    <h2 style="color: #f7f0f0; font-size: 2em;">Let's Start Your Project</h2>
+                    <p style="color: #ccc;">We'd love to hear from you! Fill out the details below, and we'll be in touch.</p>
+                </header>
+                <form id="contact-form">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required placeholder="Your full name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" required placeholder="name@example.com" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Give us Information About Your Project</label>
+                            <textarea name="message" id="message" rows="6" required placeholder="e.g., I need an AI-powered e-commerce platform with a mobile app."></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><button type="submit" class="styled-button">Send Project Details</button></li>
+                    </ul>
+                </form>
+            </section>
 
-				#banner .content {
-					max-width: 800px; /* Restrict content width */
-					animation: slideIn 1s ease-out; /* Slide-in animation for content */
-				}
-				
-				/* Slide-in animation */
-				@keyframes slideIn {
-					from {
-						transform: translateX(-100px);
-						opacity: 0;
-					}
-					to {
-						transform: translateX(0);
-						opacity: 1;
-					}
-				}
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                // Initialize EmailJS with your User ID
+                emailjs.init('kgXIjzhce1SbUpve9');
 
-				/* Fade-in animation */
-				@keyframes fadeIn {
-					from {
-						opacity: 0;
-					}
-					to {
-						opacity: 1;
-					}
-				}
-			</style>
+                // Handle form submission
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
 
-			<!-- Footer -->
-			<section id="footer">
-				<form id="contact-form">
-					<div class="fields">
-						<div class="field">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" required />
-						</div>
-						<div class="field">
-							<label for="email">Your Email</label>
-							<input type="email" name="email" id="email" required />
-						</div>
-						<div class="field">
-							<label for="message">Give us Information About Your Project</label>
-							<textarea name="message" id="message" rows="4" required></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><button type="submit" class="styled-button">Send Message</button></li>
-					</ul>
-				</form>
-			</section>
+                    emailjs.sendForm('service_lkha1el', 'template_hat5kie', this)
+                        .then(() => {
+                            alert('Message sent successfully!');
+                            this.reset(); // Reset form fields
+                        })
+                        .catch(error => {
+                            alert('Failed to send message: ' + JSON.stringify(error));
+                        });
+                });
+            </script>
 
-			<!-- Add the EmailJS Script -->
-			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-			<script>
-				// Initialize EmailJS with your user ID
-				emailjs.init('LA7Zap2_RmMa5Z7vk');  
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
 
-				// Handle form submission
-				document.getElementById('contact-form').addEventListener('submit', function (event) {
-					event.preventDefault(); // Prevent default form submission
-
-					// Send the form data via EmailJS
-					emailjs.sendForm('service_o0ojlh2', 'template_y5rp5zb', this)
-						.then(() => {
-							alert('Message sent successfully!');
-							document.getElementById('contact-form').reset(); // Reset form fields
-						})
-						.catch(error => {
-							alert('Failed to send message: ' + error);
-						});
-				});
-			</script>
-
-			<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    </body>
 </html>

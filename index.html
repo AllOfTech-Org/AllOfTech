@@ -97,7 +97,6 @@
           <ul class="nav-buttons">
             <!-- Navigation buttons with boundary style -->
             <a href="#menu" class="styled-button">Services</a>
-            <a href="projects.html" class="styled-button">Projects</a>
             <a href="About us.html" class="styled-button">About</a>
             <a href="blog.html" class="styled-button">Blog</a>
             <a href="Start_Your_Project.html" class="styled-button">Start Your Project</a>
@@ -106,16 +105,16 @@
       </header>
 
       <!-- Menu -->
-      <nav id="menu">
+      <nav id="menu"> 
         <div class="inner">
           <h2>Services</h2>
           <ol class="menu-list">
-            <li><a href="Services/AI_ML Development Services.html"><i class="fas fa-robot"></i> <span>AI/ML Development Services</span></a></li>
-            <li><a href="Services/Custom_AI_Development.html"><i class="fas fa-link"></i> <span>Blockchain Development</span></a></li>
-            <li><a href="Services/Predictive_Analytics.html"><i class="fas fa-code"></i> <span>Web Development</span></a></li>
-            <li><a href="Services/Personalized AI Solutions.html"><i class="fas fa-mobile-alt"></i> <span>Mobile App Development</span></a></li>
-            <li><a href="Services/Real-Time AI Applications.html"><i class="fas fa-pencil-ruler"></i> <span>UX/UI Design</span></a></li>
-            <li><a href="Services/Personalized AI Solutions.html"><i class="fas fa-paint-brush"></i> <span>Graphics & Branding</span></a></li>            
+            <li><a href="Services/AI_ml services template/AI_ML Development Services.html"><i class="fas fa-robot"></i> <span>AI/ML Development Services</span></a></li>
+            <li><a href="Services/Blockchain_Development.html"><i class="fas fa-link"></i> <span>Blockchain Development</span></a></li>
+            <li><a href="Services/Web_Development.html"><i class="fas fa-code"></i> <span>Web Development</span></a></li>
+            <li><a href="Services/Mobile_App_Development.html"><i class="fas fa-mobile-alt"></i> <span>Mobile App Development</span></a></li>
+            <li><a href="Services/UX_UI_Design.html"><i class="fas fa-pencil-ruler"></i> <span>UX/UI Design</span></a></li>
+            <li><a href="Services/Graphics_Branding.html"><i class="fas fa-paint-brush"></i> <span>Graphics & Branding</span></a></li>            
           </ol>
           <a href="#" class="close">Close</a>
         </div>
@@ -132,7 +131,7 @@
 								</div>
 								<div class="text-content">
 									<h2>AllOfTech</h2>
-									<p><strong>Empower your business with AI-driven solutions—custom tools, real-time apps, and smarter decision-making. Our Education Solutions equip you with the AI and data science skills to stay ahead. AllOfTech: Shaping success in a digital world.</strong></p>
+									<p><strong>Your End-to-End Technology & Design Partner: AI, Web, Mobile, and Blockchain Solutions..</strong></p>
 								</div>
 							</div>
 						</div>
@@ -206,12 +205,12 @@
 									                <!-- AI/ML Development -->
                 <!-- AI/ML Development -->
                   <article>
-                    <a href="Services/AI_ML_Development.html" class="image">
+                    <a href="Services/AI_ml services template/AI_ML Development Services.html" class="image">
                         <img src="images/AI_ML_Development.jpg" alt="AI/ML Development Services" />
                     </a>
                     <h3 class="major">AI/ML Development</h3>
                     <p>End-to-end artificial intelligence and machine learning solutions — including predictive analytics, NLP, and computer vision — tailored to your business needs.</p>
-                    <a href="Services/AI_ML_Development.html" class="special">Discover More</a>
+                    <a href="Services/AI_ml services template/AI_ML Development Services.html" class="special">Discover More</a>
                 </article>
 
                 <!-- Blockchain Development -->
@@ -308,34 +307,33 @@
 							</form>
 							<ul class="contact">
 								<li class="icon solid fa-home">Dhaka, Bangladesh</li>
-								<li class="icon solid fa-phone">+880 1521-459434<br>+880 1301-927872</li>
+								<li class="icon solid fa-phone">+880 1301-927872</li>
 								<li class="icon solid fa-envelope"><a href="mailto:contact.alloftech@gmail.com">contact.alloftech@gmail.com</a></li>
 								<li class="icon brands fa-facebook-f"><a href="#">AllOfTech</a></li>
 							</ul>
 						</div>
 					</section>
 
-      <!-- Add the EmailJS Script -->
-      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      <script>
-        // Initialize EmailJS with your user ID
-        emailjs.init('LA7Zap2_RmMa5Z7vk');  
+				<!-- EmailJS Script -->
+				<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+				<script>
+					// Initialize EmailJS with your User ID
+					emailjs.init('kgXIjzhce1SbUpve9');
 
-        // Handle form submission
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-          event.preventDefault(); // Prevent default form submission
+					// Handle form submission
+					document.getElementById('contact-form').addEventListener('submit', function(event) {
+						event.preventDefault();
 
-          // Send the form data via EmailJS
-          emailjs.sendForm('service_o0ojlh2', 'template_y5rp5zb', this)
-            .then(() => {
-              alert('Message sent successfully!');
-              document.getElementById('contact-form').reset(); // Reset form fields
-            })
-            .catch(error => {
-              alert('Failed to send message: ' + error);
-            });
-        });
-      </script>
+						emailjs.sendForm('service_lkha1el', 'template_hat5kie', this)
+							.then(() => {
+								alert('Message sent successfully!');
+								this.reset(); // Reset form fields
+							})
+							.catch(error => {
+								alert('Failed to send message: ' + JSON.stringify(error));
+							});
+					});
+				</script>
 
       <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>

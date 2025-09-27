@@ -133,7 +133,6 @@
 						<ul class="nav-buttons">
 							<!-- Navigation buttons with boundary style -->
 							<a href="#menu" class="styled-button">Services</a>
-							<a href="projects.html" class="styled-button">Projects</a>
 							<a href="index.html" class="styled-button">Home</a>
 							<a href="blog.html" class="styled-button">Blog</a>
 							<a href="Start_Your_Project.html" class="styled-button">Start Your Project</a>
@@ -206,17 +205,16 @@
 				<!-- Menu -->
 				<nav id="menu">
 					<div class="inner">
-						<h2>Services</h2>
-						<ol class="menu-list">
-							<li><a href="Services/Education.html"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
-							<li><a href="Services/Custom_AI_Development.html"><i class="fas fa-cogs"></i> <span>Custom AI Development</span></a></li>
-							<li><a href="Services/Predictive_Analytics.html"><i class="fas fa-chart-line"></i> <span>Predictive Analytics</span></a></li>
-							<li><a href="Services/Real-Time AI Applications.html"><i class="fas fa-sync-alt"></i> <span>Real-Time AI Applications</span></a></li>
-							<li><a href="Services/Personalized AI Solutions.html"><i class="fas fa-user-circle"></i> <span>Personalized AI Solutions</span></a></li>
-						</ol>
-						
-						
-						<a href="#" class="close">Close</a>
+					<h2>Services</h2>
+					<ol class="menu-list">
+						<li><a href="Services/AI_ml services template/AI_ML Development Services.html"><i class="fas fa-robot"></i> <span>AI/ML Development Services</span></a></li>
+						<li><a href="Services/Blockchain_Development.html"><i class="fas fa-link"></i> <span>Blockchain Development</span></a></li>
+						<li><a href="Services/Web_Development.html"><i class="fas fa-code"></i> <span>Web Development</span></a></li>
+						<li><a href="Services/Mobile_App_Development.html"><i class="fas fa-mobile-alt"></i> <span>Mobile App Development</span></a></li>
+						<li><a href="Services/UX_UI_Design.html"><i class="fas fa-pencil-ruler"></i> <span>UX/UI Design</span></a></li>
+						<li><a href="Services/Graphics_Branding.html"><i class="fas fa-paint-brush"></i> <span>Graphics & Branding</span></a></li>            
+					</ol>
+					<a href="#" class="close">Close</a>
 					</div>
 				</nav>
 
@@ -274,7 +272,7 @@
                         <a href="#" class="image"><img src="images/My profressional photos.jpg" alt="" /></a>
                         <div class="content">
                             <h2 class="major">Mohammod Ibrahim Hossain</h2>
-                            <p>I am <strong>Mohammod Ibrahim Hossain</strong>, a passionate professional with extensive expertise in <strong>machine learning</strong>, <strong>data science</strong>, and <strong>MLOps</strong>. As <strong>CEO</strong> and <strong>Founder</strong> of AllOfTech, I lead a team dedicated to delivering innovative AI-driven solutions that drive impactful results. My focus is on solving complex challenges, optimizing processes, and building scalable, efficient systems to fuel the growth and success of <strong>AI NextGen</strong>.</p>
+                            <p>I am <strong>Mohammod Ibrahim Hossain</strong>, a passionate professional with extensive expertise in <strong>machine learning</strong>, <strong>data science</strong>, and <strong>MLOps</strong>. As <strong>CEO</strong> and <strong>Founder</strong> of AllOfTech, I lead a team dedicated to delivering innovative AI-driven solutions that drive impactful results. My focus is on solving complex challenges, optimizing processes, and building scalable, efficient systems to fuel the growth and success of <strong>AllOfTech</strong>.</p>
                             <a href="#" class="special">Learn more</a>
                         </div>
                     </div>
@@ -314,27 +312,26 @@
 						</div>
 					</section>
 
-					<!-- Add the EmailJS Script -->
-					<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-					<script>
-						// Initialize EmailJS with your user ID
-						emailjs.init('LA7Zap2_RmMa5Z7vk');  
+				<!-- EmailJS Script -->
+				<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+				<script>
+					// Initialize EmailJS with your User ID
+					emailjs.init('kgXIjzhce1SbUpve9');
 
-						// Handle form submission
-						document.getElementById('contact-form').addEventListener('submit', function (event) {
-							event.preventDefault(); // Prevent default form submission
+					// Handle form submission
+					document.getElementById('contact-form').addEventListener('submit', function(event) {
+						event.preventDefault();
 
-							// Send the form data via EmailJS
-							emailjs.sendForm('service_o0ojlh2', 'template_y5rp5zb', this)
-								.then(() => {
-									alert('Message sent successfully!');
-									document.getElementById('contact-form').reset(); // Reset form fields
-								})
-								.catch(error => {
-									alert('Failed to send message: ' + error);
-								});
-						});
-					</script>
+						emailjs.sendForm('service_lkha1el', 'template_hat5kie', this)
+							.then(() => {
+								alert('Message sent successfully!');
+								this.reset(); // Reset form fields
+							})
+							.catch(error => {
+								alert('Failed to send message: ' + JSON.stringify(error));
+							});
+					});
+				</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
