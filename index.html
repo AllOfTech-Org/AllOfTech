@@ -230,6 +230,42 @@
           display: none !important;
         }
       }
+      
+      /* Floating Chatbot Button */
+      .chatbot-fab {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #ff5a5f;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        z-index: 10050;
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+      }
+      .chatbot-fab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        background: #ff3e44;
+      }
+      .chatbot-fab i {
+        font-size: 22px;
+        line-height: 1;
+      }
+      @media (max-width: 480px) {
+        .chatbot-fab {
+          right: 16px;
+          bottom: 16px;
+          width: 52px;
+          height: 52px;
+        }
+      }
     </style>
   </head>
 
@@ -570,6 +606,16 @@
       <script src="assets/js/main.js"></script>
 
     </div> <!-- End #page-wrapper -->
+    <!-- Floating Chatbot Button -->
+    <a
+      href="https://alloftech-chatbot.streamlit.app/"
+      class="chatbot-fab"
+      aria-label="Chat with us"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fas fa-comments"></i>
+    </a>
   </body>
 </html>
 
