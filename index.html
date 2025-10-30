@@ -611,11 +611,22 @@
       href="https://alloftech-chatbot.streamlit.app/"
       class="chatbot-fab"
       aria-label="Chat with us"
-      target="_blank"
-      rel="noopener"
+      onclick="return openChatPopup(event)"
     >
       <i class="fas fa-comments"></i>
     </a>
+    <script>
+      function openChatPopup(e) {
+        e.preventDefault();
+        var url = 'https://alloftech-chatbot.streamlit.app/';
+        var w = 420, h = 650;
+        var left = window.screenX + window.outerWidth - w - 20;
+        var top = window.screenY + window.outerHeight - h - 60;
+        var features = 'popup=yes,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=' + w + ',height=' + h + ',left=' + left + ',top=' + top;
+        window.open(url, 'AllOfTechChat', features);
+        return false;
+      }
+    </script>
   </body>
 </html>
 
