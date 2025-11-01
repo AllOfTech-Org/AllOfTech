@@ -1,632 +1,331 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>AllOfTech - AI, Software, Blockchain & Digital Transformation Experts</title>
-    <meta name="keywords" content="AllOfTech, alloftech, AI, Artificial Intelligence, Machine Learning, Web Development, Mobile App Development, Blockchain, Digital Solutions, Software Company, Tech Services, IT, Branding, UX Design, Bangladesh, Custom Software, Predictive Analytics" />
-    <meta name="description" content="AllOfTech delivers innovative AI, web, mobile, and blockchain solutions for your digital transformation. Partner with the leading experts for technology services in Bangladesh and beyond." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.alloftech.com/" />
-    <!-- Open Graph tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="AllOfTech - AI, Software, Blockchain & Digital Experts" />
-    <meta property="og:description" content="AllOfTech delivers innovative AI, software, and digital solutions for your business transformation." />
-    <meta property="og:image" content="images/Logo.png" />
-    <meta property="og:url" content="https://www.alloftech.com/" />
-    <meta property="og:site_name" content="AllOfTech" />
-    <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AllOfTech - Leading AI & Software Company" />
-    <meta name="twitter:description" content="AI, machine learning, blockchain, mobile, and web solutions—from AllOfTech." />
-    <meta name="twitter:image" content="images/Logo.png" />
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-      /* Styled button class for boundary style */
-      .styled-pbutton {
-        display: inline-block;
-        padding: 10px 15px;
-        border: 2px solid #ccc; /* Adjust color */
-        border-radius: 5px; /* Rounded corners */
-        text-decoration: none;
-        color: #f7f0f0; /* Text color */
-        font-size: 16px;
-        font-weight: bold;
-        background: transparent; /* Transparent background */
-        transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
-        text-align: center;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllOfTech - Innovative Technology Solutions Agency</title>
+    <link href="templatemo-nexus-style.css" rel="stylesheet">
+<!--
 
-      .styled-button:hover {
-        background-color: #cc0d0d; /* Change on hover */
-        color: #0a0505; /* Text color on hover */
-      }
+TemplateMo 594 nexus flow
 
-      /* Navigation container styles */
-      .nav-buttons {
-        display: flex; /* Use flexbox for layout */
-        flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
-        justify-content: center; /* Center the buttons horizontally */
-        gap: 10px; /* Add space between buttons */
-        padding: 10px;
-      }
+https://templatemo.com/tm-594-nexus-flow
 
-      /* Menu list styles */
-      .menu-list a {
-        text-decoration: none;
-        color: #f0ebeb;
-        padding: 10px 15px;
-        display: flex;
-        align-items: center;
-        font-family: 'Roboto', sans-serif; /* Using Google Font */
-        font-size: 18px;
-      }
-
-      .menu-list a:hover {
-        background-color: #0a0404;
-        color: #000;
-      }
-
-      .menu-list i {
-        margin-right: 10px;
-      }
-
-      .menu-list span {
-        font-weight: bold;
-      }
-
-      /* Mobile Navigation Styles */
-      .mobile-nav {
-        display: none;
-      }
-
-      .hamburger-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 50px;
-        height: 50px;
-      }
-
-      .hamburger-btn span {
-        display: block;
-        height: 4px;
-        width: 100%;
-        background-color: #fff;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-
-      .hamburger-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-
-      .hamburger-btn.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .hamburger-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-      }
-
-      /* Mobile Menu Overlay */
-      .mobile-menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        z-index: 10001;
-        display: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .mobile-menu-overlay.active {
-        display: flex;
-        opacity: 1;
-      }
-
-      .mobile-menu-content {
-        background-color: #2e3141;
-        width: 80%;
-        max-width: 300px;
-        height: 100%;
-        padding: 20px;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
-
-      .mobile-menu-overlay.active .mobile-menu-content {
-        transform: translateX(0);
-      }
-
-      .mobile-menu-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .mobile-menu-header h2 {
-        color: #fff;
-        margin: 0;
-        font-size: 1.5em;
-      }
-
-      .close-mobile-menu {
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 2em;
-        cursor: pointer;
-        padding: 0;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .mobile-menu-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .mobile-menu-list li {
-        margin-bottom: 15px;
-      }
-
-      .mobile-menu-link {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 15px 20px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-      }
-
-      .mobile-menu-link:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.4);
-      }
-
-      /* Responsive styles for mobile screens (max-width: 768px) */
-      @media (max-width: 768px) {
-        .desktop-nav {
-          display: none !important;
-        }
-        
-        .mobile-nav {
-          display: block !important;
-        }
-      }
-
-      /* Keep desktop navigation visible on larger screens */
-      @media (min-width: 769px) {
-        .desktop-nav {
-          display: flex !important;
-        }
-        
-        .mobile-nav {
-          display: none !important;
-        }
-        
-        .mobile-menu-overlay {
-          display: none !important;
-        }
-      }
-      
-      /* Floating Chatbot Button */
-      .chatbot-fab {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #ff5a5f;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        z-index: 10050;
-        text-decoration: none;
-        transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
-      }
-      .chatbot-fab:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-        background: #ff3e44;
-      }
-      .chatbot-fab i {
-        font-size: 22px;
-        line-height: 1;
-      }
-      @media (max-width: 480px) {
-        .chatbot-fab {
-          right: 16px;
-          bottom: 16px;
-          width: 52px;
-          height: 52px;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="is-preload">
-    <!-- Page Wrapper -->
-    <div id="page-wrapper">
-
-      <!-- Header -->
-      <header id="header" class="alt">
-        <nav>
-          <!-- Desktop Navigation -->
-          <div class="desktop-nav nav-buttons">
-            <a href="#menu" class="styled-button">Services</a>
-            <a href="About us.html" class="styled-button">About</a>
-            <a href="blog.html" class="styled-button">Blog</a>
-            <a href="Start_Your_Project.html" class="styled-button">Start Your Project</a>
-          </div>
-          
-          <!-- Mobile Hamburger Menu -->
-          <div class="mobile-nav">
-            <button class="hamburger-btn" id="hamburger-btn">
-              <span></span>
-              <span></span>
-              <span></span>
+-->
+</head>
+<body id="top">
+    <!-- Enhanced Background Elements -->
+    <div class="cyber-bg">
+        <div class="cyber-gradient"></div>
+        <div class="matrix-rain" id="matrixRain"></div>
+    </div>
+    
+    <div class="particles" id="particlesContainer"></div>
+    
+    <div class="data-streams" id="dataStreams"></div>
+    
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    
+    <div class="grid-overlay">
+        <div class="grid-lines"></div>
+        <div class="grid-glow"></div>
+    </div>
+    
+    <div class="scanlines"></div>
+    <div class="noise-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="logo">AllOfTech</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#stats">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-bottom">
+                <a href="#contact" class="cyber-button">Get Started</a>
+            </div>
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
-          </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#top" class="mobile-menu-logo">AllOfTech</a>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="#contact" class="cyber-button">Get Started</a>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#stats">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-      </header>
+    </div>
 
-      <!-- Mobile Navigation Menu Overlay -->
-      <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-content">
-          <div class="mobile-menu-header">
-            <h2>Menu</h2>
-            <button class="close-mobile-menu" id="close-mobile-menu">&times;</button>
-          </div>
-          <ul class="mobile-menu-list">
-            <li><a href="#menu" class="mobile-menu-link">Services</a></li>
-            <li><a href="About us.html" class="mobile-menu-link">About</a></li>
-            <li><a href="blog.html" class="mobile-menu-link">Blog</a></li>
-            <li><a href="Start_Your_Project.html" class="mobile-menu-link">Start Your Project</a></li>
-          </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                <span class="hero-nexus">ALLOF</span><span class="hero-flow">TECH</span>
+            </h1>
+            <p class="hero-subtitle">Innovative Technology Solutions Agency - Transforming ideas into impactful digital realities through AI/ML, Blockchain, Web Development, Mobile Apps, UX/UI Design, and Graphics & Branding.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Get Started</a>
+                <a href="#services" class="btn-secondary">Our Services</a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Menu -->
-      <nav id="menu"> 
-        <div class="inner">
-          <h2>Services</h2>
-          <ol class="menu-list">
-            <li><a href="Services/AI_ml services template/AI_ML Development Services.html"><i class="fas fa-robot"></i> <span>AI/ML Development Services</span></a></li>
-            <li><a href="Services/Blockchain_Development.html"><i class="fas fa-link"></i> <span>Blockchain Development</span></a></li>
-            <li><a href="Services/Web_Development.html"><i class="fas fa-code"></i> <span>Web Development</span></a></li>
-            <li><a href="Services/Mobile_App_Development.html"><i class="fas fa-mobile-alt"></i> <span>Mobile App Development</span></a></li>
-            <li><a href="Services/UX_UI_Design.html"><i class="fas fa-pencil-ruler"></i> <span>UX/UI Design</span></a></li>
-            <li><a href="Services/Graphics_Branding.html"><i class="fas fa-paint-brush"></i> <span>Graphics & Branding</span></a></li>            
-          </ol>
-          <a href="#" class="close">Close</a>
+    <!-- About Section -->
+    <section class="stats fade-up" id="about">
+        <div class="stats-container">
+            <div class="section-header">
+                <h2 class="section-title">About AllOfTech</h2>
+                <p class="section-subtitle">A forward-thinking technology agency dedicated to delivering cutting-edge solutions that empower businesses to thrive in the digital age.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Service Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Team Members</span>
+                </div>
+            </div>
+            <div class="section-header" style="margin-top: 3rem;">
+                <h3 class="section-title">Our Mission</h3>
+                <p class="section-subtitle">To transform ideas into impactful digital realities by leveraging advanced technologies, ensuring efficiency, security, and user-centric experiences that drive measurable results for our clients.</p>
+            </div>
         </div>
-      </nav>
+    </section>
 
-				<!-- Banner -->
-					<!-- Banner -->
-					<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div id="intro" class="banner-content">
-								<div class="logo">
-									<img src="images/Logo.png" alt="AllOfTech company logo and brand - AI, Software, Blockchain" />
-								</div>
-								<div class="text-content">
-									<h2>AllOfTech</h2>
-									<p><strong>Your End-to-End Technology & Design Partner: AI, Web, Mobile, and Blockchain Solutions..</strong></p>
-								</div>
-							</div>
-						</div>
-					</section>
+    <!-- Why Choose Section -->
+    <section class="stats fade-up" id="stats">
+        <div class="stats-container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose AllOfTech?</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years Combined Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Technologies Mastered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">On-Time Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <!-- Banner custom styling -->
-      <style>
-        #banner {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          height: 100vh;
-          background-image: url('images/E.gif'); /* Replace with your GIF file */
-          background-size: cover; /* Ensure the GIF covers the entire area */
-          background-position: center;
-          color: white;
-          text-align: left;
-          padding: 0 10%;
-        }
+    <!-- Services Section -->
+    <section class="features fade-up" id="services">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">Services We Offer</h2>
+                <p class="section-subtitle">Comprehensive technology solutions tailored to your business needs</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI/ML Development</h3>
+                    <p>Harness AI and machine learning for predictive analytics, NLP, computer vision, and intelligent automation to optimize operations and enable data-driven decision-making.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⛓️</div>
+                    <h3>Blockchain Development</h3>
+                    <p>Build secure, decentralized systems with smart contracts, dApps, tokenization, and NFTs. Create transparent, efficient solutions for finance, supply chain, and digital assets.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Create high-performance, responsive websites and web applications with modern frameworks. Secure, dynamic platforms optimized for all devices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Develop intuitive iOS and Android apps. Native or cross-platform solutions with enterprise-grade security and seamless user experiences.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Craft visually appealing interfaces through user research, wireframing, prototyping, and testing. Improve satisfaction and brand consistency.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Graphics & Branding</h3>
+                    <p>Elevate your brand with creative visuals: logos, identity design, marketing materials, and custom illustrations that tell compelling stories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        #banner .logo img {
-          width: 100px; /* Logo size */
-          height: 100px;
-          margin-bottom: 20px; /* Space below the logo */
-          border-radius: 50%; /* Circular logo */
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
-        }
+    <!-- Case Studies Section -->
+    <section class="pricing fade-up" id="case-studies">
+        <div class="pricing-container">
+            <div class="section-header">
+                <h2 class="section-title">Our Projects & Case Studies</h2>
+                <p class="section-subtitle">Success stories across industries showcasing our expertise and impact</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">AI Analytics</div>
+                    <div class="plan-price">30%</div>
+                    <div class="plan-period">Efficiency Boost</div>
+                    <ul class="plan-features">
+                        <li>AI-powered analytics platforms</li>
+                        <li>Real-time decision making</li>
+                        <li>Cost reduction</li>
+                        <li>Predictive modeling</li>
+                        <li>Actionable insights</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-name">Blockchain Systems</div>
+                    <div class="plan-price">Secure</div>
+                    <div class="plan-period">Transaction Platform</div>
+                    <ul class="plan-features">
+                        <li>Smart contract development</li>
+                        <li>dApp deployment</li>
+                        <li>Asset management</li>
+                        <li>Transparent operations</li>
+                        <li>Scalable solutions</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary">Explore</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">Web & Mobile</div>
+                    <div class="plan-price">Enhanced</div>
+                    <div class="plan-period">User Engagement</div>
+                    <ul class="plan-features">
+                        <li>Custom web applications</li>
+                        <li>Native mobile apps</li>
+                        <li>UX/UI redesigns</li>
+                        <li>Improved conversions</li>
+                        <li>Brand strengthening</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary">Discover</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        #banner .content {
-          max-width: 800px; /* Restrict content width */
-          animation: slideIn 1s ease-out; /* Slide-in animation for content */
-        }
+    <!-- Contact Section -->
+    <section class="contact fade-up" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title">Ready to Transform Your Business?</h2>
+                <p class="section-subtitle">Get in touch for a free consultation and explore how our solutions can address your challenges</p>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-submit">Send Message</button>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <div style="color: #0aff9d; font-size: 1.1rem; margin-bottom: 1rem;">Contact Information</div>
+                <div style="margin-bottom: 0.5rem;">
+                    <a href="mailto:contact.alloftech@gmail.com" style="color: #00ffff; text-decoration: none;">📧 contact.alloftech@gmail.com</a>
+                </div>
+                <div style="margin-bottom: 0.5rem;">
+                    <a href="https://alloftech-org.github.io/AllOfTech/" target="_blank" style="color: #00ffff; text-decoration: none;">🌐 Website</a>
+                </div>
+                <div style="margin-bottom: 0.5rem;">
+                    <a href="https://www.facebook.com/AllOfTech.official" target="_blank" style="color: #00ffff; text-decoration: none;">📘 Facebook</a>
+                </div>
+                <div>
+                    <a href="https://www.reddit.com/user/Rare-Philosophy387/" target="_blank" style="color: #00ffff; text-decoration: none;">🔴 Reddit</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        /* Slide-in animation */
-        @keyframes slideIn {
-          from {
-            transform: translateX(-100px);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <span class="footer-separator">•</span>
+                <a href="#services">Services</a>
+                <span class="footer-separator">•</span>
+                <a href="#case-studies">Case Studies</a>
+                <span class="footer-separator">•</span>
+                <a href="#contact">Contact</a>
+                <span class="footer-separator">•</span>
+                <a href="https://www.facebook.com/AllOfTech.official" target="_blank">Facebook</a>
+                <span class="footer-separator">•</span>
+                <a href="https://www.reddit.com/user/Rare-Philosophy387/" target="_blank">Reddit</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AllOfTech. All rights reserved.</p>
+                <p class="footer-credit">Innovative Technology Solutions Agency</p>
+            </div>
+        </div>
+    </footer>
 
-        /* Fade-in animation */
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      </style>
+    <script src="templatemo-nexus-scripts.js"></script>
+</body>
 
-
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						
-						<!-- Four -->
-						<section id="four" class="wrapper alt style1">
-							<div class="inner">
-								<h2 class="major">Our Services</h2>
-								<p>Explore our comprehensive range of cutting-edge solutions designed to meet your business needs. From innovative AI solutions to real-time analytics, we deliver excellence across various industries.</p>
-								
-								<section class="features">
-									                <!-- AI/ML Development -->
-                <!-- AI/ML Development -->
-                  <article>
-                    <a href="Services/AI_ml services template/AI_ML Development Services.html" class="image">
-                        <img src="images/AI_ML_Development.jpg" alt="AI/ML Development Services" />
-                    </a>
-                    <h3 class="major">AI/ML Development</h3>
-                    <p>End-to-end artificial intelligence and machine learning solutions — including predictive analytics, NLP, and computer vision — tailored to your business needs.</p>
-                    <a href="Services/AI_ml services template/AI_ML Development Services.html" class="special">Discover More</a>
-                </article>
-
-                <!-- Blockchain Development -->
-                <article>
-                    <a href="Services/Blockchain_Development.html" class="image">
-                        <img src="images/blockchain.png" alt="Blockchain Development" />
-                    </a>
-                    <h3 class="major">Blockchain Development</h3>
-                    <p>Decentralized apps, smart contracts, and custom blockchain solutions to enhance security, transparency, and trust in your digital ecosystem.</p>
-                    <a href="Services/Blockchain_Development.html" class="special">Learn More</a>
-                </article>
-
-                <!-- Web Development -->
-                <article>
-                    <a href="Services/Web_Development.html" class="image">
-                        <img src="images/Web_Development.png" alt="Web Development" />
-                    </a>
-                    <h3 class="major">Web Development</h3>
-                    <p>Responsive, scalable, and high-performance websites and web apps — including frontend, backend, APIs, and cloud infrastructure.</p>
-                    <a href="Services/Web_Development.html" class="special">Explore Solutions</a>
-                </article>
-                 
-                <!-- Mobile App Development -->
-                <article>
-                    <a href="Services/Mobile_App_Development.html" class="image">
-                        <img src="images/Mobile_App_Development.png" alt="Mobile App Development" />
-                    </a>
-                    <h3 class="major">Mobile App Development</h3>
-                    <p>Native and cross-platform mobile applications designed for performance, scalability, and seamless user experiences on Android and iOS.</p>
-                    <a href="Services/Mobile_App_Development.html" class="special">See More</a>
-                </article>
-
-                <!-- UX/UI Design -->
-                <article>
-                    <a href="Services/UX_UI_Design.html" class="image">
-                        <img src="images/UX_UI_Design.png" alt="UX/UI Design" />
-                    </a>
-                    <h3 class="major">UX/UI Design</h3>
-                    <p>Intuitive and visually engaging digital experiences — from wireframes and prototypes to user testing and interface design.</p>
-                    <a href="Services/UX_UI_Design.html" class="special">Get Started</a>
-                </article>
-
-              <!-- Graphics & Branding -->
-              <article>
-                  <a href="Services/Graphics_Branding.html" class="image">
-                      <img src="images/Graphics_Branding.png" alt="Graphics and Branding" />
-                  </a>
-                  <h3 class="major">Graphics & Branding</h3>
-                  <p>Creative logos, brand identity, marketing materials, and custom designs to help your business stand out and connect with customers.</p>
-                  <a href="Services/Graphics_Branding.html" class="special">Learn More</a>
-              </article>
-								</section>
-							</div>
-						</section>
-						
-							
-						<!-- One -->
-						<!-- </section>
-						<section id="one" class="wrapper spotlight style1">
-							<div class="inner">
-							<a href="#" class="image"><img src="images/My profressional photos.jpg" alt="" /></a>
-							<div class="content">
-								<h2 class="major">Mohammod Ibrahim Hossain</h2>
-								<p>I am <strong>Mohammod Ibrahim Hossain</strong>, a passionate professional with extensive expertise in <strong>machine learning</strong>, <strong>data science</strong>, and <strong>MLOps</strong>. As <strong>CEO</strong> and <strong>Founder</strong> of AllOfTech, I lead a team dedicated to delivering innovative AI-driven solutions that drive impactful results. My focus is on solving complex challenges, optimizing processes, and building scalable, efficient systems to fuel the growth and success of <strong>AllOfTech</strong>.</p>
-								<a href="https://mohammod2.github.io/Protfolio/" class="special">Learn more</a>
-							</div>
-						</div>
-					  </section> -->
-					
-					<!-- Footer -->
-<!-- Form in Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>We'd love to hear from you! Whether you have questions, need assistance, or are looking to collaborate, our team is here to help. Reach out to us through the following channels:</p>
-							<form id="contact-form">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" required />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" required />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4" required></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><button type="submit" class="styled-button">Send Message</button></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">Dhaka, Bangladesh</li>
-								<li class="icon solid fa-phone">+880 1301-927872</li>
-								<li class="icon solid fa-envelope"><a href="mailto:contact.alloftech@gmail.com">contact.alloftech@gmail.com</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">AllOfTech</a></li>
-							</ul>
-          <div class="legal-links" style="text-align: center; margin-top: 10px; opacity: 0.9;">
-            <a href="Policies.html">Terms &amp; Privacy</a>
-          </div>
-						</div>
-					</section>
-
-				<!-- EmailJS Script -->
-				<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-				<script>
-					// Initialize EmailJS with your User ID
-					emailjs.init('kgXIjzhce1SbUpve9');
-
-					// Handle form submission
-					document.getElementById('contact-form').addEventListener('submit', function(event) {
-						event.preventDefault();
-
-						emailjs.sendForm('service_lkha1el', 'template_hat5kie', this)
-							.then(() => {
-								alert('Message sent successfully!');
-								this.reset(); // Reset form fields
-							})
-							.catch(error => {
-								alert('Failed to send message: ' + JSON.stringify(error));
-							});
-					});
-				</script>
-
-      <!-- Mobile Menu JavaScript -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const hamburgerBtn = document.getElementById('hamburger-btn');
-          const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-          const closeMobileMenu = document.getElementById('close-mobile-menu');
-          const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-          // Open mobile menu
-          hamburgerBtn.addEventListener('click', function() {
-            hamburgerBtn.classList.add('active');
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-          });
-
-          // Close mobile menu
-          function closeMenu() {
-            hamburgerBtn.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Restore scrolling
-          }
-
-          closeMobileMenu.addEventListener('click', closeMenu);
-
-          // Close menu when clicking on overlay
-          mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-              closeMenu();
-            }
-          });
-
-          // Close menu when clicking on menu links
-          mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-          });
-
-          // Close menu on escape key
-          document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-              closeMenu();
-            }
-          });
-
-          // Handle window resize to ensure proper display
-          window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-              closeMenu();
-            }
-          });
-        });
-      </script>
-
-      <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
-
-    </div> <!-- End #page-wrapper -->
-    <!-- Floating Chatbot Button -->
-    <a
-      href="https://alloftech-chatbot.streamlit.app/"
-      class="chatbot-fab"
-      aria-label="Chat with us"
-      onclick="return openChatPopup(event)"
-    >
-      <i class="fas fa-comments"></i>
-    </a>
-    <script>
-      function openChatPopup(e) {
-        e.preventDefault();
-        var url = 'https://alloftech-chatbot.streamlit.app/';
-        var w = 420, h = 650;
-        var left = window.screenX + window.outerWidth - w - 20;
-        var top = window.screenY + window.outerHeight - h - 60;
-        var features = 'popup=yes,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=' + w + ',height=' + h + ',left=' + left + ',top=' + top;
-        window.open(url, 'AllOfTechChat', features);
-        return false;
-      }
-    </script>
-  </body>
-</html>
-
+</html> 
